@@ -1,4 +1,4 @@
-FROM openjdk:9-alpine
+FROM openjdk:13-alpine
 
 RUN apk add --update --no-cache wget unzip curl
 RUN curl --silent "https://api.github.com/repos/pmd/pmd/releases/latest"|grep '"tag_name":'|sed -E 's/.*"([^"]+)".*/\1/'|cut -d '/' -f2
